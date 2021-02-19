@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../:\Users\hassa\NTNU.Data\1år\2.sem\Programmering2\Mappe\Mappe1\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+
+
+*.idea
+
+*.iml
