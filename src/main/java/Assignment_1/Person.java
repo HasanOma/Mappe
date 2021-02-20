@@ -1,3 +1,7 @@
+package Assignment_1;
+
+import java.util.Objects;
+
 public abstract class Person {
 
     protected String firstName;
@@ -42,5 +46,18 @@ public abstract class Person {
 
     public void setPersonalID(String personalID) {
         this.personalID = personalID;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(personalID, person.personalID);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(personalID);
     }
 }

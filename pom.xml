@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>IDATx2001</groupId>
-    <artifactId>Mappe_Del_1</artifactId>
+    <artifactId>Mappe</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
