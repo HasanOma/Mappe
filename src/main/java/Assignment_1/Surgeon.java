@@ -9,6 +9,6 @@ public class Surgeon extends Doctor {
 
     @Override
     public void setDiagnosis(Patient patient, String diagnosis) {
-//TODO fill out this method
+        patient.setDiagnosis(diagnosis);
     }
 }

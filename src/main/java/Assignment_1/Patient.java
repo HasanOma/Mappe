@@ -19,7 +19,7 @@ public class Patient extends Person implements Diagnosable {
     }
 
     @Override
-    public void setDiagnosis() {
-
+    public void setDiagnosis(String newDiagnosis) {
+        this.diagnosis = newDiagnosis;
     }
 }

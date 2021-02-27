@@ -30,7 +30,7 @@ public class Department {
         return list;
     }
 
-    public List<Patient> getPatient(){
+    public List<Patient> getPatients(){
         List<Patient> list = new ArrayList<>();
         for (Patient patient : patients) {
             list.add(new Patient(patient.firstName, patient.lastName, patient.personalID));
@@ -55,6 +55,40 @@ public class Department {
         }
         else {
             patients.add(newPatient);
+        }
+    }
+
+    public void remove(Patient patient){
+        try{
+            if (patients.contains(patient)) {
+                for (int i = 0; i < patients.size(); i++) {
+                    if (patient.personalID.equals(employees.get(i).personalID)) {
+                        patients.remove(i);
+                    }
+                }
+            }
+            else {
+                throw new RemoveException("Patient does not exist in the register.");
+            }
+        }catch (RemoveException r){
+            System.out.println(r.getMessage());
+        }
+    }
+
+    public void remove(Employee employee){
+        try{
+            if (employees.contains(employee)) {
+                for (int i = 0; i < employees.size(); i++) {
+                    if (employee.personalID.equals(employees.get(i).personalID)) {
+                        employees.remove(i);
+                    }
+                }
+            }
+            else {
+                throw new RemoveException("Employee does not exist in the register.");
+            }
+        }catch (RemoveException r){
+            System.out.println(r.getMessage());
         }
     }
 

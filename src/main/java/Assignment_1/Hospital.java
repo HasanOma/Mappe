@@ -15,6 +15,10 @@ public class Hospital {
         return hospitalName;
     }
 
+    public void addDepartment(Department department){
+        departments.add(department);
+    }
+
     public List<Department> getDepartments(){
         List<Department> list = new ArrayList<>();
         for (Department department : departments) {

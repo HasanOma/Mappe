@@ -2,6 +2,6 @@ package Assignment_1;
 
 public interface Diagnosable {
 
-    void setDiagnosis();
+    void setDiagnosis(String newDiagnosis);
 
 }
