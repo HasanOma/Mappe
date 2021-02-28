@@ -13,7 +13,7 @@ class DepartmentTest {
 
     @Test
     @DisplayName("Removing an employee that does not exist")
-    void removingAnEmployeeThatDoesNotExist() throws RemoveException {
+    void removingAnEmployeeThatDoesNotExist() {
         Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
         Department department = hospital.departments.get(0);
 
@@ -26,7 +26,7 @@ class DepartmentTest {
 
     @Test
     @DisplayName("Removing an employee from the department")
-    void removingAnEmployeeFromTheDepartment() throws RemoveException {
+    void removingAnEmployeeFromTheDepartment() {
         Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
         Department department = hospital.departments.get(0);
 
@@ -39,7 +39,7 @@ class DepartmentTest {
 
     @Test
     @DisplayName("Removing a patient that does not exist")
-    void removingAPatientThatDoesNotExcist() throws RemoveException {
+    void removingAPatientThatDoesNotExcist() {
         Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
         Department department = hospital.departments.get(0);
 
@@ -52,7 +52,7 @@ class DepartmentTest {
 
     @Test
     @DisplayName("Removing a patient from the department")
-    void removingAPatientFromTheDepartment() throws RemoveException {
+    void removingAPatientFromTheDepartment() {
         Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
         Department department = hospital.departments.get(0);
 

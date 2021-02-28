@@ -58,7 +58,7 @@ public class Department {
         }
     }
 
-    public void remove(Patient patient){
+    public void removePerson(Patient patient){
         try{
             if (patients.contains(patient)) {
                 for (int i = 0; i < patients.size(); i++) {
@@ -75,7 +75,7 @@ public class Department {
         }
     }
 
-    public void remove(Employee employee){
+    public void removePerson(Employee employee){
         try{
             if (employees.contains(employee)) {
                 for (int i = 0; i < employees.size(); i++) {

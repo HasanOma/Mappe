@@ -19,6 +19,22 @@ public class Hospital {
         departments.add(department);
     }
 
+    public void removePersonFromDepartment(String spesificDepartment, Patient patient){
+        for (int i = 0; i < departments.size(); i++){
+            if (departments.get(i).departmentName.trim().equalsIgnoreCase(spesificDepartment.trim())){
+                departments.get(i).removePerson(patient);
+            }
+        }
+    }
+
+    public void removePersonFromDepartment(String spesificDepartment, Employee employee){
+        for (int i = 0; i < departments.size(); i++){
+            if (departments.get(i).departmentName.trim().equalsIgnoreCase(spesificDepartment.trim())){
+                departments.get(i).removePerson(employee);
+            }
+        }
+    }
+
     public List<Department> getDepartments(){
         List<Department> list = new ArrayList<>();
         for (Department department : departments) {
