@@ -5,7 +5,12 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-
+/**
+ * Mappe_Del_1
+ * @author Hasan Omarzae
+ *
+ * Test class for department class' remove method
+ */
 @DisplayName("Department Name")
 class DepartmentTest {
 
@@ -16,11 +21,12 @@ class DepartmentTest {
         Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
         Department department = hospital.departments.get(0);
 
+        Employee notEmployee = new Employee("Arnold","Schwarzenegger","99");
         int beforeRemove = department.employees.size();
-        department.employees.remove(department.employees.get(0));
+        department.employees.remove(notEmployee);
         int afterRemove = department.employees.size();
 
-        assertEquals(afterRemove, beforeRemove-1);
+        assertEquals(afterRemove, beforeRemove);
     }
 
     @Test
@@ -42,8 +48,9 @@ class DepartmentTest {
         Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
         Department department = hospital.departments.get(0);
 
+        Patient notPatient = new Patient("Jesus","Christ","666");
         int beforeRemove = department.patients.size();
-        department.patients.remove(department.patients.get(0));
+        department.patients.remove(notPatient);
         int afterRemove = department.patients.size();
 
         assertEquals(afterRemove, beforeRemove);
@@ -63,12 +70,24 @@ class DepartmentTest {
     }
 
     @Test
-    @DisplayName("s")
-    void s() throws RemoveException{
+    @DisplayName("Removing a patient that does not exist RemoveException class thrown")
+    void removingAPatientThatDoesNotExistRemoveExceptionClassThrown() {
         Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
         Department department = hospital.departments.get(0);
 
-        assertThrows(RemoveException.class, () -> department.removePerson(new Patient("ken", "robin", "5")));
+        assertThrows(RemoveException.class,
+                () -> department.remove(new Patient("ken", "robin", "5")));
     }
+
+    @Test
+    @DisplayName("Removing an employee that does not exist RemoveException class thrown")
+    void removingAnEmployeeThatDoesNotExistRemoveExceptionClassThrown() {
+        Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
+        Department department = hospital.departments.get(0);
+
+        assertThrows(RemoveException.class,
+                () -> department.remove(new Employee("ken", "robin", "5")));
+    }
+
 
 }

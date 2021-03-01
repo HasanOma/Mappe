@@ -9,7 +9,4 @@ public class RemoveException extends Exception {
         super(message);
     }
 
-    public RemoveException() {
-
-    }
 }

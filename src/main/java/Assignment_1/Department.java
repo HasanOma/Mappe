@@ -112,9 +112,8 @@ public class Department {
 
     @Override
     public int hashCode() {
-        return Objects.hash(departmentName);
+        return Objects.hash(departmentName, patients, employees);
     }
-
 
     @Override
     public boolean equals(Object o) {

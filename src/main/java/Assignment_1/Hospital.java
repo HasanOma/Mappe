@@ -25,35 +25,14 @@ public class Hospital {
         return hospitalName;
     }
 
+    /**
+     * This method adds a department to a hospital
+     * @param department Department object
+     */
     public void addDepartment(Department department){
         departments.add(department);
     }
 
-//    /**
-//     * This method calls on a method in the Department class to remove a patient from a specific Department
-//     * @param specificDepartment Department name
-//     * @param patient A patient object
-//     */
-//    public void removePersonFromDepartment(String specificDepartment, Patient patient) throws RemoveException {
-//        for (int i = 0; i < departments.size(); i++){
-//            if (departments.get(i).departmentName.trim().equalsIgnoreCase(specificDepartment.trim())){
-//                departments.get(i).removePerson(patient);
-//            }
-//        }
-//    }
-//
-//    /**
-//     * This method calls on a method in the Department class to remove an employee from a specific Department
-//     * @param specificDepartment Department name
-//     * @param employee an employee object
-//     */
-//    public void removePersonFromDepartment(String specificDepartment, Employee employee) throws RemoveException {
-//        for (int i = 0; i < departments.size(); i++){
-//            if (departments.get(i).departmentName.trim().equalsIgnoreCase(specificDepartment.trim())){
-//                departments.get(i).removePerson(employee);
-//            }
-//        }
-//    }
 
     /**
      * This method copies all departments to a list

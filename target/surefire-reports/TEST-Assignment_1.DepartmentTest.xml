@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Assignment_1.DepartmentTest" time="0.047" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Assignment_1.DepartmentTest" time="0.048" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="NO"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\hassa\AppData\Local\Temp\surefire16708858078637728079\surefirebooter397856574292517637.jar C:\Users\hassa\AppData\Local\Temp\surefire16708858078637728079 2021-03-01T15-15-45_840-jvmRun1 surefire8356270061193102340tmp surefire_014576159249764323936tmp"/>
+    <property name="sun.java.command" value="C:\Users\hassa\AppData\Local\Temp\surefire3771710290541233236\surefirebooter17740875514127694699.jar C:\Users\hassa\AppData\Local\Temp\surefire3771710290541233236 2021-03-01T18-28-24_144-jvmRun1 surefire16501945414558402300tmp surefire_011906107223406965575tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\hassa\NTNU.Data\1år\2.sem\Programmering2\Komplett_Mappe_IDATx2001\Mappe\target\test-classes;C:\Users\hassa\NTNU.Data\1år\2.sem\Programmering2\Komplett_Mappe_IDATx2001\Mappe\target\classes;C:\Users\hassa\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\hassa\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\hassa\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\hassa\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\hassa\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\hassa\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\hassa\AppData\Local\Temp\surefire16708858078637728079\surefirebooter397856574292517637.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\hassa\AppData\Local\Temp\surefire3771710290541233236\surefirebooter17740875514127694699.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14.0.2+12-46"/>
@@ -56,9 +56,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="removingAnEmployeeFromTheDepartment" classname="Assignment_1.DepartmentTest" time="0.033"/>
+  <testcase name="removingAnEmployeeFromTheDepartment" classname="Assignment_1.DepartmentTest" time="0.034"/>
+  <testcase name="removingAPatientThatDoesNotExistRemoveExceptionClassThrown" classname="Assignment_1.DepartmentTest" time="0.002"/>
   <testcase name="removingAnEmployeeThatDoesNotExist" classname="Assignment_1.DepartmentTest" time="0"/>
   <testcase name="removingAPatientThatDoesNotExcist" classname="Assignment_1.DepartmentTest" time="0.001"/>
   <testcase name="removingAPatientFromTheDepartment" classname="Assignment_1.DepartmentTest" time="0.001"/>
-  <testcase name="s" classname="Assignment_1.DepartmentTest" time="0.003"/>
+  <testcase name="removingAnEmployeeThatDoesNotExistRemoveExceptionClassThrown" classname="Assignment_1.DepartmentTest" time="0.001"/>
 </testsuite>

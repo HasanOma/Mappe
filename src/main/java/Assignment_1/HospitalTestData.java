@@ -1,7 +1,12 @@
 package Assignment_1;
 
 import Assignment_1.Person.*;
-
+/**
+ * Mappe_Del_1
+ * @author Hasan Omarzae
+ *
+ * Autofill class for Assignment_1
+ */
 public final class HospitalTestData {
     private HospitalTestData() {
         // not called
