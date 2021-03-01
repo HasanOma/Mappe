@@ -1,9 +1,8 @@
 package Assignment_1;
 
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 
@@ -13,7 +12,7 @@ class DepartmentTest {
 
     @Test
     @DisplayName("Removing an employee that does not exist")
-    void removingAnEmployeeThatDoesNotExist() {
+    void removingAnEmployeeThatDoesNotExist() throws RemoveException{
         Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
         Department department = hospital.departments.get(0);
 
@@ -21,12 +20,12 @@ class DepartmentTest {
         department.employees.remove(department.employees.get(0));
         int afterRemove = department.employees.size();
 
-        assertEquals(afterRemove, beforeRemove);
+        assertEquals(afterRemove, beforeRemove-1);
     }
 
     @Test
     @DisplayName("Removing an employee from the department")
-    void removingAnEmployeeFromTheDepartment() {
+    void removingAnEmployeeFromTheDepartment() throws RemoveException{
         Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
         Department department = hospital.departments.get(0);
 
@@ -39,7 +38,7 @@ class DepartmentTest {
 
     @Test
     @DisplayName("Removing a patient that does not exist")
-    void removingAPatientThatDoesNotExcist() {
+    void removingAPatientThatDoesNotExcist() throws RemoveException{
         Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
         Department department = hospital.departments.get(0);
 
@@ -52,7 +51,7 @@ class DepartmentTest {
 
     @Test
     @DisplayName("Removing a patient from the department")
-    void removingAPatientFromTheDepartment() {
+    void removingAPatientFromTheDepartment() throws RemoveException{
         Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
         Department department = hospital.departments.get(0);
 
@@ -62,4 +61,14 @@ class DepartmentTest {
 
         assertEquals(afterRemove+1, beforeRemove);
     }
+
+    @Test
+    @DisplayName("s")
+    void s() throws RemoveException{
+        Hospital hospital = HospitalTestData.fillRegisterWithTestData(new Hospital("Test"));
+        Department department = hospital.departments.get(0);
+
+        assertThrows(RemoveException.class, () -> department.removePerson(new Patient("ken", "robin", "5")));
+    }
+
 }

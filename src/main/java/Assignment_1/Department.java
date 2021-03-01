@@ -4,13 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Mappe_Del_1
+ * @author Hasan Omarzae
+ *
+ *Class from a Department in a Hospital
+ */
 public class Department {
     public String departmentName;
     public ArrayList<Patient> patients = new ArrayList<>();
     public ArrayList<Employee> employees = new ArrayList<>();
 
 
+    /**
+     * Constructor of the Department class
+     * @param departmentName Name of the department
+     */
     public Department(String departmentName) {
+        super();
         this.departmentName = departmentName;
     }
 
@@ -22,6 +33,10 @@ public class Department {
         this.departmentName = departmentName;
     }
 
+    /**
+     * This method copies all the employees in the department to a list
+     * @return List of employees
+     */
     public List<Employee> getEmployees(){
         List<Employee> list = new ArrayList<>();
         for (Employee employee : employees) {
@@ -30,6 +45,10 @@ public class Department {
         return list;
     }
 
+    /**
+     * This method copies all the patients in the department to a list
+     * @return List of patients
+     */
     public List<Patient> getPatients(){
         List<Patient> list = new ArrayList<>();
         for (Patient patient : patients) {
@@ -38,6 +57,10 @@ public class Department {
         return list;
     }
 
+    /**
+     * This method sees whether an employee with the same ID already exists
+     * @param employee An employee object
+     */
     public void addEmployee(Employee employee){
         Employee newEmployee = new Employee(employee.firstName, employee.lastName, employee.personalID);
         if (employees.contains(employee)){
@@ -48,6 +71,10 @@ public class Department {
         }
     }
 
+    /**
+     * This method sees whether an patients with the same ID already exists
+     * @param patient A patient object
+     */
     public void addPatient(Patient patient){
         Patient newPatient = new Patient(patient.firstName, patient.lastName, patient.personalID);
         if (patients.contains(patient)){
@@ -58,37 +85,28 @@ public class Department {
         }
     }
 
-    public void removePerson(Patient patient){
-        try{
-            if (patients.contains(patient)) {
-                for (int i = 0; i < patients.size(); i++) {
-                    if (patient.personalID.equals(employees.get(i).personalID)) {
-                        patients.remove(i);
-                    }
-                }
-            }
-            else {
-                throw new RemoveException("Patient does not exist in the register.");
-            }
-        }catch (RemoveException r){
-            System.out.println(r.getMessage());
-        }
-    }
 
-    public void removePerson(Employee employee){
-        try{
-            if (employees.contains(employee)) {
-                for (int i = 0; i < employees.size(); i++) {
-                    if (employee.personalID.equals(employees.get(i).personalID)) {
-                        employees.remove(i);
-                    }
+    /**
+     * Method to see if person is in employee or patient register and then remove them
+     * @param person A person object
+     * @throws RemoveException Exception thrown if not in register
+     */
+    public void remove(Person person) throws RemoveException {
+        if (!(employees.contains(person) || patients.contains(person))) {
+            throw new RemoveException("Person does not exist in the register.");
+        } else if (employees.contains(person)) {
+            for (int i = 0; i < employees.size(); i++) {
+                if (person.personalID.equals(employees.get(i).personalID)) {
+                    employees.remove(i);
                 }
             }
-            else {
-                throw new RemoveException("Employee does not exist in the register.");
+
+        } else if (patients.contains(person)) {
+            for (int i = 0; i < patients.size(); i++) {
+                if (person.personalID.equals(employees.get(i).personalID)) {
+                    patients.remove(i);
+                }
             }
-        }catch (RemoveException r){
-            System.out.println(r.getMessage());
         }
     }
 
@@ -97,7 +115,6 @@ public class Department {
         return Objects.hash(departmentName);
     }
 
-//    public void remove(person)
 
     @Override
     public boolean equals(Object o) {
@@ -107,6 +124,10 @@ public class Department {
         return departmentName.equals(that.departmentName);
     }
 
+    /**
+     *
+     * @return String of object details
+     */
     @Override
     public String toString() {
         StringBuilder string = new StringBuilder();

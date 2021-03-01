@@ -2,6 +2,13 @@ package Assignment_1;
 
 import java.util.Objects;
 
+/**
+ * Mappe_Del_1
+ * @author Hasan Omarzae
+ *
+ * Abstract class for a person
+ *
+ */
 public abstract class Person {
 
     protected String firstName;
@@ -9,7 +16,7 @@ public abstract class Person {
     protected String personalID;
 
     /**
-     *
+     *Constructor of the class
      * @param firstName First name of person
      * @param lastName Last name of person
      * @param personalID ID-Number of the person

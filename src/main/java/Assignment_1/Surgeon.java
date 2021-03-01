@@ -1,5 +1,8 @@
 package Assignment_1;
 
+import Assignment_1.Doctor;
+import Assignment_1.Patient;
+
 public class Surgeon extends Doctor {
 
 

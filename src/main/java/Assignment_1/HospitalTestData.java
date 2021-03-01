@@ -1,5 +1,7 @@
 package Assignment_1;
 
+import Assignment_1.Person.*;
+
 public final class HospitalTestData {
     private HospitalTestData() {
         // not called

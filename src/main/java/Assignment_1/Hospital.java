@@ -3,10 +3,20 @@ package Assignment_1;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Mappe_Del_1
+ * @author Hasan Omarzae
+ *
+ *Class for the Hospital
+ */
 public class Hospital {
     public String hospitalName;
     ArrayList<Department> departments = new ArrayList<>();
 
+    /**
+     * Constructor of the class
+     * @param hospitalName Name of the hospital
+     */
     public Hospital(String hospitalName) {
         this.hospitalName = hospitalName;
     }
@@ -19,22 +29,36 @@ public class Hospital {
         departments.add(department);
     }
 
-    public void removePersonFromDepartment(String spesificDepartment, Patient patient){
-        for (int i = 0; i < departments.size(); i++){
-            if (departments.get(i).departmentName.trim().equalsIgnoreCase(spesificDepartment.trim())){
-                departments.get(i).removePerson(patient);
-            }
-        }
-    }
+//    /**
+//     * This method calls on a method in the Department class to remove a patient from a specific Department
+//     * @param specificDepartment Department name
+//     * @param patient A patient object
+//     */
+//    public void removePersonFromDepartment(String specificDepartment, Patient patient) throws RemoveException {
+//        for (int i = 0; i < departments.size(); i++){
+//            if (departments.get(i).departmentName.trim().equalsIgnoreCase(specificDepartment.trim())){
+//                departments.get(i).removePerson(patient);
+//            }
+//        }
+//    }
+//
+//    /**
+//     * This method calls on a method in the Department class to remove an employee from a specific Department
+//     * @param specificDepartment Department name
+//     * @param employee an employee object
+//     */
+//    public void removePersonFromDepartment(String specificDepartment, Employee employee) throws RemoveException {
+//        for (int i = 0; i < departments.size(); i++){
+//            if (departments.get(i).departmentName.trim().equalsIgnoreCase(specificDepartment.trim())){
+//                departments.get(i).removePerson(employee);
+//            }
+//        }
+//    }
 
-    public void removePersonFromDepartment(String spesificDepartment, Employee employee){
-        for (int i = 0; i < departments.size(); i++){
-            if (departments.get(i).departmentName.trim().equalsIgnoreCase(spesificDepartment.trim())){
-                departments.get(i).removePerson(employee);
-            }
-        }
-    }
-
+    /**
+     * This method copies all departments to a list
+     * @return List of departments
+     */
     public List<Department> getDepartments(){
         List<Department> list = new ArrayList<>();
         for (Department department : departments) {
@@ -43,6 +67,10 @@ public class Hospital {
         return list;
     }
 
+    /**
+     *
+     * @return String of object details
+     */
     @Override
     public String toString() {
         StringBuilder string = new StringBuilder();

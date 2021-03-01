@@ -1,5 +1,6 @@
 package Assignment_1;
 
+
 public class GeneralPractitioner extends Doctor {
 
 
