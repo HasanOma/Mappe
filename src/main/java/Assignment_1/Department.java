@@ -21,7 +21,6 @@ public class Department {
      * @param departmentName Name of the department
      */
     public Department(String departmentName) {
-        super();
         this.departmentName = departmentName;
     }
 

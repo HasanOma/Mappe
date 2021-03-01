@@ -11,7 +11,13 @@ import Assignment_1.Patient;
  */
 public class Surgeon extends Doctor {
 
-
+    /**
+     * {@link Doctor}
+     * Constructor of the class
+     * @param firstName First name
+     * @param lastName Surname
+     * @param personalID ID
+     */
     protected Surgeon(String firstName, String lastName, String personalID) {
         super(firstName, lastName, personalID);
     }

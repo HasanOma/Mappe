@@ -33,7 +33,6 @@ public class Hospital {
         departments.add(department);
     }
 
-
     /**
      * This method copies all departments to a list
      * @return List of departments

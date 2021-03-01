@@ -8,7 +8,13 @@ package Assignment_1;
  */
 public class GeneralPractitioner extends Doctor {
 
-
+    /**
+     * {@link Doctor}
+     * Constructor of the class
+     * @param firstName First name
+     * @param lastName Surname
+     * @param personalID ID
+     */
     protected GeneralPractitioner(String firstName, String lastName, String personalID) {
         super(firstName, lastName, personalID);
     }

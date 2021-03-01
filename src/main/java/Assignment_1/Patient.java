@@ -31,10 +31,14 @@ public class Patient extends Person implements Diagnosable {
      */
     @Override
     public String toString() {
-        return "Name: '" + firstName + lastName + '\'' +
+        return "Name: '" + firstName + " " + lastName + '\'' +
                 "Personal ID: '" + personalID + '\'';
     }
 
+    /**
+     * This method takes in new diagnosis and updates it
+     * @param newDiagnosis New diagnosis for patient
+     */
     @Override
     public void setDiagnosis(String newDiagnosis) {
         this.diagnosis = newDiagnosis;

@@ -21,12 +21,11 @@ public class Employee extends Person {
     }
 
     /**
-     *
      * @return String of object details
      */
     @Override
     public String toString() {
-        return "Name: '" + firstName + lastName + '\'' +
+        return "Name: '" + firstName + " " + lastName + '\'' +
                 "Personal ID: '" + personalID + '\'';
     }
 }
