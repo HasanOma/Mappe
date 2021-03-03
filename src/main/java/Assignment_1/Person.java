@@ -22,6 +22,10 @@ public abstract class Person {
      * @param personalID ID-Number of the person
      */
     public Person(String firstName, String lastName, String personalID) {
+        if (firstName.isBlank() || lastName.isBlank()){
+            throw new IllegalArgumentException("First name or surname cannot has to be filled in");
+        }
+        
         this.firstName = firstName;
         this.lastName = lastName;
         this.personalID = personalID;

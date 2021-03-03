@@ -18,6 +18,9 @@ public class Hospital {
      * @param hospitalName Name of the hospital
      */
     public Hospital(String hospitalName) {
+        if (hospitalName.isBlank()) {
+            throw new IllegalArgumentException("Department name is not put in.");
+        }
         this.hospitalName = hospitalName;
     }
 

@@ -21,6 +21,9 @@ public class Department {
      * @param departmentName Name of the department
      */
     public Department(String departmentName) {
+        if (departmentName.isBlank()) {
+            throw new IllegalArgumentException("Department name is not put in.");
+        }
         this.departmentName = departmentName;
     }
 
