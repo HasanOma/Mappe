@@ -4,7 +4,6 @@ package Assignment_1;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-
 /**
  * Mappe_Del_1
  * @author Hasan Omarzae
