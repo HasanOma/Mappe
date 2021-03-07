@@ -28,7 +28,9 @@
 *.ear
 *.tar.gz
 
-/target/
+*/target/
+*/tatget/**
+/tatget/**
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
