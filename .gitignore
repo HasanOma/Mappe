@@ -7,7 +7,20 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 
-
+target
 *.idea
 
 *.iml
+#Log file
+*.log
+
+#Compile class file
+*.class
+
+#Package files
+*.nar
+*.war
+*.jar
+*.zip
+*.rar
+*.ear
