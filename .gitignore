@@ -7,7 +7,6 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 
-target
 *.idea
 
 *.iml
@@ -24,3 +23,5 @@ target
 *.zip
 *.rar
 *.ear
+
+target
