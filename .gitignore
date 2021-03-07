@@ -28,6 +28,8 @@
 *.ear
 *.tar.gz
 
+/target
+
 */target/
 */tatget/**
 /tatget/**
