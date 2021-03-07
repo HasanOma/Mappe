@@ -15,7 +15,6 @@ public class Department {
     public ArrayList<Patient> patients = new ArrayList<>();
     public ArrayList<Employee> employees = new ArrayList<>();
 
-
     /**
      * Constructor of the Department class
      * @param departmentName Name of the department
